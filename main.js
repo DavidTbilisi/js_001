@@ -1,13 +1,16 @@
 
 
-let answer = prompt("how old are you?");
+let btn = document.querySelector("#myButton")
 
-if (answer < 18) {
-    alert("You are a minor.");
+function getRandomNumber() {
+    return Math.floor(Math.random() * 100) + 1
 }
-else if (answer >= 18 && answer < 65) {
-    alert("You are an adult.");
-}
-else {
-    alert("You are a senior citizen.");
-}
+
+btn.addEventListener("click", function() {
+    let randomNumber = getRandomNumber()
+    let result = document.querySelector("#result")
+    result.innerHTML = "Random Number: " + randomNumber
+    
+
+})
+
